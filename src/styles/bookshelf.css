@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  font-family: 'Rubik', sans-serif;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px 0;
+  width: 80%;
+  margin: auto auto;
+}
+
+body section #bookshelf {
+  width: 100%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+body section #bookshelf .book {
+  position: relative;
+  padding: 20px 30px;
+  background-color: #f8f8f8;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 160px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body section #bookshelf .book .title {
+  white-space: nowrap;
+  /* Prevent text from wrapping to a new line */
+  overflow: hidden;
+  /* Hide any content that overflows */
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  color: black;
+}
+
+body section #bookshelf .book hr {
+  outline: none;
+  border: 0.5px solid black;
+}
+
+body section #bookshelf .book .author {
+  white-space: nowrap;
+  /* Prevent text from wrapping to a new line */
+  overflow: hidden;
+  /* Hide any content that overflows */
+  text-overflow: ellipsis;
+}
+
+body section #bookshelf .book .author span {
+  font-weight: 100;
+  font-size: 16px;
+}
+
+body section #bookshelf .book div.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body section #bookshelf .book div.info p:first-child {
+  white-space: nowrap;
+  /* Prevent text from wrapping to a new line */
+  overflow: hidden;
+  /* Hide any content that overflows */
+  text-overflow: ellipsis;
+}
+
+body section #bookshelf .book div.info p:first-child span {
+  font-weight: 100;
+  font-size: 16px;
+}
+
+body section #bookshelf .book div.info p:last-child {
+  margin-left: 20px;
+}
+
+body section #bookshelf .book div.tools {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 150px;
+  height: 50px;
+  padding: 0 5px;
+  border-radius: 0 0 0 20px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+body section #bookshelf .book div.tools > i {
+  cursor: pointer;
+  color: #eee;
+}
+
+body section #bookshelf .book div.tools > i:hover {
+  cursor: pointer;
+  color: red;
+}
+
+body section #bookshelf .book div.tools .read-state {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body section #bookshelf .book div.tools .read-state i {
+  color: green;
+}
+
+body section #bookshelf .book div.tools .read-state span {
+  color: #EEE;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body section #bookshelf .book:hover {
+  padding-left: 28px;
+}
+
+body section #bookshelf .book:hover div.tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: identifier 0.3s ease-in-out;
+          animation: identifier 0.3s ease-in-out;
+}
+
+body section #bookshelf .book:not(:hover) div.tools {
+  display: none;
+}
+/*# sourceMappingURL=bookshelf.css.map */

@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  font-family: 'Rubik', sans-serif;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body section #modal {
+  display: none;
+}
+
+body section #modal #form-sec {
+  -webkit-animation: identifier 0.3s ease-in-out;
+          animation: identifier 0.3s ease-in-out;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  width: 350px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+body section #modal #form-sec .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+body section #modal #form-sec .modal-header > span {
+  color: red;
+  -webkit-animation: pop-up 0.6s ease-in-out;
+          animation: pop-up 0.6s ease-in-out;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+body section #modal #form-sec .modal-header #close {
+  -webkit-animation: pop-up-left 0.6s ease-in-out;
+          animation: pop-up-left 0.6s ease-in-out;
+  cursor: pointer;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: #e0e0e0;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+body section #modal #form-sec .modal-header #close span {
+  display: none;
+  padding-left: 5px;
+  -webkit-animation: identifier 0.3s ease-in-out;
+          animation: identifier 0.3s ease-in-out;
+}
+
+body section #modal #form-sec .modal-header #close i {
+  -webkit-animation: rotate-x 0.6s ease-in-out;
+          animation: rotate-x 0.6s ease-in-out;
+  font-size: 20px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+body section #modal #form-sec .modal-header #close:hover {
+  background-color: black;
+  width: 100px;
+  color: white;
+  border-radius: 20px;
+}
+
+body section #modal #form-sec .modal-header #close:hover span {
+  display: block;
+}
+
+body section #modal #form-sec .modal-header #close:hover i {
+  rotate: 90deg;
+}
+
+body section #modal #form-sec form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+
+body section #modal #form-sec form input {
+  -webkit-animation: pop-up 0.6s ease-in-out;
+          animation: pop-up 0.6s ease-in-out;
+  border-radius: 5px;
+  height: 40px;
+  padding: 0 10px;
+  outline: none;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body section #modal #form-sec form input:focus {
+  border-color: black;
+  padding-left: 15px;
+}
+
+body section #modal #form-sec form button {
+  -webkit-animation: pop-up 0.6s ease-in-out;
+          animation: pop-up 0.6s ease-in-out;
+}
+
+body section #modal #form-sec form input.invalid {
+  border-color: red;
+}
+
+body section #modal .overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+body section #modal.active {
+  display: block;
+}
+/*# sourceMappingURL=modal.css.map */

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@mixin overflow-text-hidden {
+	white-space: nowrap; /* Prevent text from wrapping to a new line */
+	overflow: hidden; /* Hide any content that overflows */
+	text-overflow: ellipsis;
+}
+
+@mixin set-to-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	font-family: 'Rubik', sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+    section {
+		@include set-to-flex();
+		flex-direction: column;
+		padding: 50px 0;
+		width: 80%;
+		margin: auto auto;
+		#bookshelf {
+			width: 100%;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+			gap: 50px;
+			.book {
+				position: relative;
+				padding: 20px 30px;
+				background-color: #f8f8f8;
+				border: 1px solid black;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 160px;
+				border-radius: 5px;
+				transition: 0.3s;
+				.title {
+					@include overflow-text-hidden();
+					text-transform: uppercase;
+					color: black;
+				}
+				hr {
+					outline: none;
+					border: 0.5px solid black;
+				}
+				.author {
+					@include overflow-text-hidden();
+					span {
+						font-weight: 100;
+						font-size: 16px;
+					}
+				}
+				div.info {
+					display: flex;
+					justify-content: space-between;
+					p:first-child {
+						@include overflow-text-hidden();
+						span {
+							font-weight: 100;
+							font-size: 16px;
+						}
+					}
+					p:last-child {
+						margin-left: 20px;
+					}
+				}
+				div.tools {
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 150px;
+					height: 50px;
+					padding: 0 5px;
+					border-radius: 0 0 0 20px;
+					background-color: black;
+					@include set-to-flex();
+					gap: 10px;
+					> i {
+						cursor: pointer;
+						color: #eee;
+					}
+					> i:hover {
+						cursor: pointer;
+						color: red;
+					}
+					.read-state {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						i {
+							color: green;
+						}
+						span {
+							color: #EEE;
+							padding: 5px 10px;
+							border-radius: 20px;
+							cursor: pointer;
+							transition: 0.3s;
+						}
+					}
+				}
+			}
+			.book:hover {
+				padding-left: 28px;
+				div.tools {
+					display: flex;
+					animation: identifier 0.3s ease-in-out;
+				}
+			}
+			.book:not(:hover) {
+				div.tools {
+					// animation: identifier-rev 0.3s ease-in-out;
+					display: none;
+				}
+			}
+		}
+	}
+}
