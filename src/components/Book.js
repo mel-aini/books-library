@@ -1,18 +1,13 @@
 
-export default function Book() {
-    let title = 'Atomic habits';
-    let author = 'James clear';
-    let pages = '120';
-    let state = 'unred';
-
+export default function Book({ book }) {
     return (
         <div className="book">
-            <h1 className="title">{ title }</h1>
+            <h1 className="title">{ book.title }</h1>
             <hr />
-            <h3 className="author"><span>author : </span>{ author }</h3>
+            <h3 className="author"><span>author : </span>{ book.author }</h3>
             <div className="info">
-                <p><span>pages : </span>{ pages }</p>
-                <p>{ state }</p>
+                <p><span>pages : </span>{ book.pages }</p>
+                <p>{ book.state }</p>
             </div>
             <div className="tools">
                 <div className="read-state">

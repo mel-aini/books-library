@@ -1,13 +1,17 @@
 
-import '../styles/modal.css'
+import '../styles/modal.css';
 
-export default function Modal() {
+export default function Modal({ modalClass, setModalClass }) {
+	const closeModal = () => {
+		setModalClass(null);
+	};
+
     return (
-        <div id="modal">
+			<div id="modal" className={ modalClass }>
             <div id="form-sec">
 				<div className="modal-header">
 					<span>Already exist</span>
-					<div id="close">
+					<div id="close" onClick={closeModal}>
 						<i className="fa-solid fa-xmark"></i>
 						<span>close</span>
 					</div>
