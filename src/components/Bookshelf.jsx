@@ -2,16 +2,7 @@ import { useState } from 'react';
 import '../styles/bookshelf.css';
 import Book from './Book';
 
-export default function Bookshelf() {
-    let [myLibrary, setMyLibrary] = useState([
-        {
-            title: "Atomic",
-            author: "Atomic",
-            pages: "Atomic",
-            state: "Atomic",
-            id: 1
-        }]);
-
+export default function Bookshelf( { myLibrary, setMyLibrary } ) {
     const EmptyLib = () => {
         if (myLibrary.length != 0)
             return null;
@@ -22,8 +13,8 @@ export default function Bookshelf() {
     return (
         <div id="bookshelf">
             <EmptyLib />
-            {myLibrary.map((book) => (
-                <Book book={ book } key={ book.id }/>
+            {myLibrary.map((book, index) => (
+                <Book book={ book } index={ index } myLibrary={ myLibrary } setMyLibrary={ setMyLibrary } key={ book.id }/>
             ))}
 		</div>
     )
