@@ -1,133 +1,105 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 * {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Rubik", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body section #modal {
   display: none;
 }
-
 body section #modal #form-sec {
-  -webkit-animation: identifier 0.3s ease-in-out;
-          animation: identifier 0.3s ease-in-out;
+  animation: identifier 0.3s ease-in-out;
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background-color: white;
   width: 350px;
   padding: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   z-index: 10;
   border-radius: 5px;
 }
-
 body section #modal #form-sec .modal-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
 }
-
 body section #modal #form-sec .modal-header > span {
   color: red;
-  -webkit-animation: pop-up 0.6s ease-in-out;
-          animation: pop-up 0.6s ease-in-out;
-  -webkit-transition: 0.3s;
+  animation: pop-up 0.6s ease-in-out;
   transition: 0.3s;
   opacity: 0;
 }
-
 body section #modal #form-sec .modal-header #close {
-  -webkit-animation: pop-up-left 0.6s ease-in-out;
-          animation: pop-up-left 0.6s ease-in-out;
+  animation: pop-up-left 0.6s ease-in-out;
   cursor: pointer;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  background-color: #e0e0e0;
+  align-self: flex-end;
+  background-color: rgb(224, 224, 224);
   width: 37px;
   height: 37px;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
+  position: relative;
 }
-
 body section #modal #form-sec .modal-header #close span {
-  display: none;
+  position: absolute;
+  opacity: 0;
   padding-left: 5px;
-  -webkit-animation: identifier 0.3s ease-in-out;
-          animation: identifier 0.3s ease-in-out;
+  transition: 0.2s;
+  right: 5px;
+  top: 10px;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
 }
-
-body section #modal #form-sec .modal-header #close i {
-  -webkit-animation: rotate-x 0.6s ease-in-out;
-          animation: rotate-x 0.6s ease-in-out;
+body section #modal #form-sec .modal-header #close svg {
+  position: absolute;
+  color: #335c67;
+  animation: rotate-x 0.6s ease-in-out;
   font-size: 20px;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-
 body section #modal #form-sec .modal-header #close:hover {
-  background-color: black;
+  background-color: #335c67;
   width: 100px;
   color: white;
   border-radius: 20px;
 }
-
 body section #modal #form-sec .modal-header #close:hover span {
-  display: block;
+  opacity: 1;
+  right: 20%;
 }
-
-body section #modal #form-sec .modal-header #close:hover i {
+body section #modal #form-sec .modal-header #close:hover svg {
+  left: 10%;
+  transform: translate(-50%, 0%);
+  color: white;
   rotate: 90deg;
 }
-
 body section #modal #form-sec form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 20px;
 }
-
 body section #modal #form-sec form input {
-  -webkit-animation: pop-up 0.6s ease-in-out;
-          animation: pop-up 0.6s ease-in-out;
+  animation: pop-up 0.6s ease-in-out;
   border-radius: 5px;
   height: 40px;
   padding: 0 10px;
@@ -136,24 +108,18 @@ body section #modal #form-sec form input {
   border-style: solid;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 body section #modal #form-sec form input:focus {
-  border-color: black;
+  border-color: rgb(0, 0, 0);
   padding-left: 15px;
 }
-
 body section #modal #form-sec form button {
-  -webkit-animation: pop-up 0.6s ease-in-out;
-          animation: pop-up 0.6s ease-in-out;
+  animation: pop-up 0.6s ease-in-out;
 }
-
 body section #modal #form-sec form input.invalid {
   border-color: red;
 }
-
 body section #modal .overlay {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
@@ -162,8 +128,6 @@ body section #modal .overlay {
   width: 100vw;
   height: 100vh;
 }
-
 body section #modal.active {
   display: block;
-}
-/*# sourceMappingURL=modal.css.map */
+}/*# sourceMappingURL=modal.css.map */

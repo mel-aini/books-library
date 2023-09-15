@@ -1,71 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 * {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Rubik", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 30px 0;
   width: 80%;
   margin: auto auto;
 }
-
 body section #add-book {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-bottom: 20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 body section #add-book button {
   width: 150px;
 }
-
 body section > hr {
   width: 100%;
   height: 3px;
-  background-color: black;
+  background-color: #335c67;
   margin-bottom: 30px;
 }
 
 button {
   cursor: pointer;
   height: 40px;
-  background-color: black;
+  background-color: #335c67;
   border: 1px solid transparent;
   color: white;
   border-radius: 5px;
   font-weight: 500;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 button:hover {
   background-color: transparent;
-  border-color: black;
-  color: black;
-}
-/*# sourceMappingURL=section.css.map */
+  border-color: #335c67;
+  color: #335c67;
+}/*# sourceMappingURL=section.css.map */

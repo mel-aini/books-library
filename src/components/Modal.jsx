@@ -1,6 +1,7 @@
 
 import '../styles/modal.css';
 import { useRef } from 'react';
+import { FaXmark } from "react-icons/fa6";
 
 export default function Modal({ modalClass, setModalClass, myLibrary, setMyLibrary }) {
 	let titleRef = useRef();
@@ -71,7 +72,7 @@ export default function Modal({ modalClass, setModalClass, myLibrary, setMyLibra
 				<div className="modal-header">
 					<span ref={ existRef }>Already exist</span>
 					<div id="close" onClick={closeModal}>
-						<i className="fa-solid fa-xmark"></i>
+						<FaXmark />
 						<span>close</span>
 					</div>
 				</div>
