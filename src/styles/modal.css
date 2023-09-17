@@ -24,7 +24,7 @@ body section #modal #form-sec {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  width: 350px;
+  width: min(90%, 350px);
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@ body section #modal #form-sec .modal-header #close span {
 }
 body section #modal #form-sec .modal-header #close svg {
   position: absolute;
-  color: #335c67;
+  color: #ff6400;
   animation: rotate-x 0.6s ease-in-out;
   font-size: 20px;
   transition: 0.4s;
@@ -77,7 +77,7 @@ body section #modal #form-sec .modal-header #close svg {
   transform: translate(-50%, -50%);
 }
 body section #modal #form-sec .modal-header #close:hover {
-  background-color: #335c67;
+  background-color: #ff6400;
   width: 100px;
   color: white;
   border-radius: 20px;
@@ -130,4 +130,10 @@ body section #modal .overlay {
 }
 body section #modal.active {
   display: block;
+}
+
+@media (min-width: 640px) {
+  body section #modal #form-sec {
+    width: 350px;
+  }
 }/*# sourceMappingURL=modal.css.map */

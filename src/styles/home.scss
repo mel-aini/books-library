@@ -1,0 +1,79 @@
+@import "general.scss";
+
+body {
+  background-color: $bgColor;
+  section.home {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../assets/lesly-juarez-EW2cPMEp0mI-unsplash.jpg");
+    background-size: cover;
+    position: relative;
+    @include set-to-flex();
+    flex-direction: column;
+    padding: 30px 0;
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, 0);
+      height: 70px;
+      width: 100%;
+      gap: 15px;
+      color: white;
+      z-index: 2;
+      width: 90%;
+      svg {
+        font-size: 23px;
+      }
+      h1 {
+        text-transform: uppercase;
+        font-size: 25px;
+      }
+    }
+    .container {
+      z-index: 1;
+      color: white;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      .up {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: $color1;
+        .logo {
+          font-size: 100px;
+        }
+        h1 {
+          font-size: 40px;
+          text-transform: uppercase;
+        }
+      }
+      .down {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        p {
+          width: min(100%, 450px);
+        }
+        button {
+          width: min(100%, 300px);
+        }
+      }
+    }
+  }
+  section.home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, #000000, rgba(#000000, 0));
+    z-index: 0;
+  }
+}

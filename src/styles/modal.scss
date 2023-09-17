@@ -32,7 +32,7 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: white;
-        width: 350px;
+        width: min(90%, 350px);
         padding: 30px;
         display: flex;
         flex-direction: column;
@@ -140,6 +140,18 @@ body {
     }
     #modal.active {
       display: block;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  body {
+    section {
+      #modal {
+        #form-sec {
+          width: 350px;
+        }
+      }
     }
   }
 }

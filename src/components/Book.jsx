@@ -51,7 +51,7 @@ export default function Book({ book, index, myLibrary, setMyLibrary }) {
   return (
     <div className="book">
       <div className="up-area">
-        <h1 className="title">
+        <h1 className="title" title={book.title}>
           <GiBlackBook />
           {book.title}
         </h1>
@@ -65,12 +65,18 @@ export default function Book({ book, index, myLibrary, setMyLibrary }) {
               ref={readButton}
               onClick={makeBookState}
               className="read-button"
+              title="mark book as read/unread"
             >
               <FaBookOpen />
             </span>
           )}
           {toolsOpen && (
-            <span ref={delButton} onClick={deleteBook} className="del-button">
+            <span
+              ref={delButton}
+              onClick={deleteBook}
+              className="del-button"
+              title="delete"
+            >
               <FaTrash />
             </span>
           )}

@@ -14,36 +14,36 @@
   box-sizing: border-box;
 }
 
-body section {
+body section.bookshelf-area {
+  width: 90%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   padding: 50px 0;
-  width: 80%;
-  margin: auto auto;
+  width: 90%;
+  margin: 0 auto;
+  min-height: 100vh;
 }
-body section #add-book div {
+body section.bookshelf-area #add-book div {
   display: flex;
   align-items: end;
-  color: #335c67;
+  color: #ff6400;
 }
-body section #add-book div svg {
+body section.bookshelf-area #add-book div svg {
   margin-right: 10px;
   font-size: 20px;
 }
-body section #bookshelf {
+body section.bookshelf-area #bookshelf {
   width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
 }
-body section #bookshelf .book {
+body section.bookshelf-area #bookshelf .book {
   position: relative;
   padding: 20px 30px;
-  background-color: #fff3b0;
-  border: 1px solid transparent;
+  background-color: #2f2f2e;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -53,92 +53,97 @@ body section #bookshelf .book {
   max-width: 100%;
   min-width: 100%;
 }
-body section #bookshelf .book .up-area {
+body section.bookshelf-area #bookshelf .book .up-area {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body section #bookshelf .book .up-area .title {
+body section.bookshelf-area #bookshelf .book .up-area .title {
   white-space: nowrap; /* Prevent text from wrapping to a new line */
   overflow: hidden; /* Hide any content that overflows */
   text-overflow: ellipsis;
   text-transform: uppercase;
-  color: #335c67;
+  color: #dddddd;
 }
-body section #bookshelf .book .up-area .title svg {
+body section.bookshelf-area #bookshelf .book .up-area .title svg {
   font-size: 19px;
   margin-right: 10px;
 }
-body section #bookshelf .book .up-area .tools-icons {
+body section.bookshelf-area #bookshelf .book .up-area .tools-icons {
   display: flex;
   gap: 6px;
   justify-content: flex-end;
   align-items: center;
-  color: #335c67;
+  color: #dddddd;
+  margin-left: 3px;
 }
-body section #bookshelf .book .up-area .tools-icons .dots,
-body section #bookshelf .book .up-area .tools-icons .del-button,
-body section #bookshelf .book .up-area .tools-icons .read-button {
-  min-width: 20px;
-  margin-left: 10px;
+body section.bookshelf-area #bookshelf .book .up-area .tools-icons .dots,
+body section.bookshelf-area #bookshelf .book .up-area .tools-icons .del-button,
+body section.bookshelf-area #bookshelf .book .up-area .tools-icons .read-button {
+  min-width: 14px;
+  margin-left: 5px;
   cursor: pointer;
   transition: 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body section #bookshelf .book .up-area .tools-icons .del-button {
+body section.bookshelf-area #bookshelf .book .up-area .tools-icons .del-button {
   animation: tools-icons-frames 0.3s ease-in;
+  font-size: 14px;
 }
-body section #bookshelf .book .up-area .tools-icons .read-button {
+body section.bookshelf-area #bookshelf .book .up-area .tools-icons .read-button {
   opacity: 0;
   animation: tools-icons-frames 0.3s ease-in 0.2s;
   animation-fill-mode: forwards;
 }
-body section #bookshelf .book .up-area .tools-icons .del-button.fade-out,
-body section #bookshelf .book .up-area .tools-icons .read-button.fade-out {
+body section.bookshelf-area #bookshelf .book .up-area .tools-icons .del-button.fade-out,
+body section.bookshelf-area #bookshelf .book .up-area .tools-icons .read-button.fade-out {
   opacity: 0;
   animation-fill-mode: none;
   transform: translateX(20px);
 }
-body section #bookshelf .book .up-area .tools-icons .read-button:hover svg,
-body section #bookshelf .book .up-area .tools-icons .read-button:hover span {
+body section.bookshelf-area #bookshelf .book .up-area .tools-icons .read-button:hover svg,
+body section.bookshelf-area #bookshelf .book .up-area .tools-icons .read-button:hover span {
   color: rgb(25, 221, 188);
 }
-body section #bookshelf .book .up-area .tools-icons .del-button:hover svg,
-body section #bookshelf .book .up-area .tools-icons .del-button:hover span {
+body section.bookshelf-area #bookshelf .book .up-area .tools-icons .del-button:hover svg,
+body section.bookshelf-area #bookshelf .book .up-area .tools-icons .del-button:hover span {
   color: rgb(247, 10, 10);
 }
-body section #bookshelf .book hr {
+body section.bookshelf-area #bookshelf .book hr {
   outline: none;
-  border: 0.5px solid #335c67;
+  border: 0.5px solid #dddddd;
 }
-body section #bookshelf .book .author {
+body section.bookshelf-area #bookshelf .book .author {
   white-space: nowrap; /* Prevent text from wrapping to a new line */
   overflow: hidden; /* Hide any content that overflows */
   text-overflow: ellipsis;
-  color: #335c67;
+  color: #dddddd;
 }
-body section #bookshelf .book .author span {
+body section.bookshelf-area #bookshelf .book .author span {
   font-weight: 100;
   font-size: 16px;
 }
-body section #bookshelf .book div.info {
+body section.bookshelf-area #bookshelf .book div.info {
   display: flex;
   justify-content: space-between;
-  color: #335c67;
+  color: #dddddd;
 }
-body section #bookshelf .book div.info p:first-child {
+body section.bookshelf-area #bookshelf .book div.info p:first-child {
   white-space: nowrap; /* Prevent text from wrapping to a new line */
   overflow: hidden; /* Hide any content that overflows */
   text-overflow: ellipsis;
 }
-body section #bookshelf .book div.info p:first-child span {
+body section.bookshelf-area #bookshelf .book div.info p:first-child span {
   font-weight: 100;
   font-size: 16px;
 }
-body section #bookshelf .book div.info p:last-child {
+body section.bookshelf-area #bookshelf .book div.info p:last-child {
   margin-left: 20px;
+}
+body section.bookshelf-area #bookshelf p.empty {
+  color: #dddddd;
 }
 
 @keyframes tools-icons-frames {
@@ -152,22 +157,22 @@ body section #bookshelf .book div.info p:last-child {
   }
 }
 @media (min-width: 640px) {
-  body section #bookshelf {
+  body section.bookshelf-area #bookshelf {
     grid-template-columns: 1fr;
   }
 }
 @media (min-width: 768px) {
-  body section #bookshelf {
-    grid-template-columns: 1fr 1fr;
+  body section.bookshelf-area #bookshelf {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 1024px) {
-  body section #bookshelf {
+@media (min-width: 1280px) {
+  body section.bookshelf-area #bookshelf {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 1536px) {
-  body section #bookshelf {
+  body section.bookshelf-area #bookshelf {
     grid-template-columns: repeat(4, 1fr);
   }
 }/*# sourceMappingURL=bookshelf.css.map */
