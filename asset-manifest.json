@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/books-library/static/css/main.f117f236.css",
+    "main.js": "/books-library/static/js/main.ef83b3ef.js",
+    "static/media/lesly-juarez-EW2cPMEp0mI-unsplash.jpg": "/books-library/static/media/lesly-juarez-EW2cPMEp0mI-unsplash.6deb636535e8caa57b0b.jpg",
+    "index.html": "/books-library/index.html",
+    "main.f117f236.css.map": "/books-library/static/css/main.f117f236.css.map",
+    "main.ef83b3ef.js.map": "/books-library/static/js/main.ef83b3ef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f117f236.css",
+    "static/js/main.ef83b3ef.js"
+  ]
+}
