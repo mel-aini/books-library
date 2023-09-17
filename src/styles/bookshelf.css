@@ -36,7 +36,7 @@ body section #bookshelf {
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   gap: 50px;
 }
 body section #bookshelf .book {
@@ -50,6 +50,8 @@ body section #bookshelf .book {
   height: 160px;
   border-radius: 5px;
   transition: 0.3s;
+  max-width: 100%;
+  min-width: 100%;
 }
 body section #bookshelf .book .up-area {
   display: flex;
@@ -147,5 +149,25 @@ body section #bookshelf .book div.info p:last-child {
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+@media (min-width: 640px) {
+  body section #bookshelf {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 768px) {
+  body section #bookshelf {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  body section #bookshelf {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1536px) {
+  body section #bookshelf {
+    grid-template-columns: repeat(4, 1fr);
   }
 }/*# sourceMappingURL=bookshelf.css.map */
