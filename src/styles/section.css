@@ -26,7 +26,6 @@ body section #add-book button {
 }
 body section > hr {
   width: 100%;
-  height: 3px;
   background-color: #ff6400;
   margin-bottom: 30px;
 }

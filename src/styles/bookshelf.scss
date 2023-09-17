@@ -93,7 +93,7 @@ body {
             }
             .del-button {
               animation: tools-icons-frames 0.3s ease-in;
-              font-size: 14px;
+              font-size: 13px;
             }
             .read-button {
               opacity: 0;
@@ -109,13 +109,13 @@ body {
             .read-button:hover {
               svg,
               span {
-                color: rgb(25, 221, 188);
+                color: #14cc6f;
               }
             }
             .del-button:hover {
               svg,
               span {
-                color: rgb(247, 10, 10);
+                color: #cc1414;
               }
             }
           }
@@ -145,6 +145,12 @@ body {
           }
           p:last-child {
             margin-left: 20px;
+            opacity: 0.5;
+            transition: 0.3s;
+          }
+          p:last-child.read {
+            color: #14cc6f;
+            opacity: 1;
           }
         }
         // div.tools {

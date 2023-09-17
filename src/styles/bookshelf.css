@@ -90,7 +90,7 @@ body section.bookshelf-area #bookshelf .book .up-area .tools-icons .read-button 
 }
 body section.bookshelf-area #bookshelf .book .up-area .tools-icons .del-button {
   animation: tools-icons-frames 0.3s ease-in;
-  font-size: 14px;
+  font-size: 13px;
 }
 body section.bookshelf-area #bookshelf .book .up-area .tools-icons .read-button {
   opacity: 0;
@@ -105,11 +105,11 @@ body section.bookshelf-area #bookshelf .book .up-area .tools-icons .read-button.
 }
 body section.bookshelf-area #bookshelf .book .up-area .tools-icons .read-button:hover svg,
 body section.bookshelf-area #bookshelf .book .up-area .tools-icons .read-button:hover span {
-  color: rgb(25, 221, 188);
+  color: #14cc6f;
 }
 body section.bookshelf-area #bookshelf .book .up-area .tools-icons .del-button:hover svg,
 body section.bookshelf-area #bookshelf .book .up-area .tools-icons .del-button:hover span {
-  color: rgb(247, 10, 10);
+  color: #cc1414;
 }
 body section.bookshelf-area #bookshelf .book hr {
   outline: none;
@@ -141,6 +141,12 @@ body section.bookshelf-area #bookshelf .book div.info p:first-child span {
 }
 body section.bookshelf-area #bookshelf .book div.info p:last-child {
   margin-left: 20px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+body section.bookshelf-area #bookshelf .book div.info p:last-child.read {
+  color: #14cc6f;
+  opacity: 1;
 }
 body section.bookshelf-area #bookshelf p.empty {
   color: #dddddd;

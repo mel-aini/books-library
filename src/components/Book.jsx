@@ -9,12 +9,13 @@ export default function Book({ book, index, myLibrary, setMyLibrary }) {
   const [toolsOpen, setToolsOpen] = useState(false);
   const delButton = useRef(null);
   const readButton = useRef(null);
+  const readElem = useRef(null);
 
   book.state = bookState;
   const deleteBook = () => {
     let updatedLib = [];
     for (let i = 0; i < myLibrary.length; i++) {
-      if (i == book.id - 1) continue;
+      if (i === book.id - 1) continue;
       updatedLib.push(myLibrary[i]);
     }
     localStorage.setItem("keyLib", JSON.stringify(updatedLib));
@@ -26,10 +27,12 @@ export default function Book({ book, index, myLibrary, setMyLibrary }) {
     // change the read state according to the object index and set it again.
     let old = JSON.parse(localStorage.getItem("keyLib")) || [];
     if (bookState === "unread") {
+      readElem.current.classList.add("read");
       setBookState("read"); // the setState method in react works asynchronously
       if (old[index]) old[index].state = "read";
     } else {
       setBookState("unread");
+      readElem.current.classList.remove("read");
       if (old[index]) old[index].state = "unread";
     }
     localStorage.setItem("keyLib", JSON.stringify(old));
@@ -93,7 +96,7 @@ export default function Book({ book, index, myLibrary, setMyLibrary }) {
           <span>pages : </span>
           {book.pages}
         </p>
-        <p>{bookState}</p>
+        <p ref={readElem}>{bookState}</p>
       </div>
       {/* {toolsOpen && (
         <div className="tools">
